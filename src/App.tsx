@@ -122,17 +122,17 @@ export const App: FC = () => {
 
       <div className="todoapp__content">
         <Header
-          addTodo={addTodo}
-          isLoading={isLoading}
           query={query}
           onQueryChange={setQuery}
+          addTodo={addTodo}
+          isLoading={isLoading}
           loadingIds={loadingIds}
         />
 
         <TodoList
           todos={filteredTodos}
-          deleteTodos={deleteTodos}
           tempTodo={tempTodo}
+          deleteTodos={deleteTodos}
           loadingIds={loadingIds}
           isLoading={isLoading}
         />

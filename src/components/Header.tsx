@@ -1,10 +1,10 @@
 import { FC, FormEvent, useEffect, useRef } from 'react';
 
 interface Props {
-  addTodo: (event: FormEvent<HTMLFormElement>) => void;
-  isLoading: boolean;
   query: string;
   onQueryChange: (newQuery: string) => void;
+  addTodo: (event: FormEvent<HTMLFormElement>) => void;
+  isLoading: boolean;
   loadingIds: number[];
 }
 

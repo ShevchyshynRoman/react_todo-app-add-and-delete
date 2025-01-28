@@ -5,16 +5,16 @@ import { TodoItem } from './TodoItem';
 
 interface Props {
   todos: Todo[];
-  deleteTodos: (todosIds: number[]) => void;
   tempTodo: Todo | null;
+  deleteTodos: (todosIds: number[]) => void;
   loadingIds: number[];
   isLoading: boolean;
 }
 
 export const TodoList: FC<Props> = ({
   todos,
-  deleteTodos,
   tempTodo,
+  deleteTodos,
   loadingIds,
   isLoading,
 }) => {
@@ -26,8 +26,8 @@ export const TodoList: FC<Props> = ({
           <CSSTransition key={todo.id} timeout={300} classNames="item">
             <TodoItem
               key={todo.id}
-              deleteTodos={deleteTodos}
               todo={todo}
+              deleteTodos={deleteTodos}
               loadingIds={loadingIds}
               isLoading={false}
             />
